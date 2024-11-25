@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
+import Image from 'next/image';
+import Logo from '../public/img/logo.png'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,22 +37,27 @@ const Navbar: React.FC = () => {
     <nav className={`w-full bg-white shadow-md fixed top-0 left-0 z-50 px-30px md:px-[80px] transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold">
+        {/* <div className="text-2xl font-bold">
           <Link href="/" className="text-blue-500">Logo</Link>
+        </div> */}
+
+        <div className='flex space-x-2 items-center'>
+          <Image src={Logo} alt="logo" width={40} height={40} />
+          <h3 className="text-black font-monserat-semibold text-[18px]">Go <br /> Green</h3>
         </div>
 
         {/* Links (hidden on small screens) */}
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="text-gray-700 font-monserat-semibold hover:text-blue-500">
+          <Link href="/" className="text-black font-monserat-semibold hover:text-[#597C61]">
             Home
           </Link>
-          <Link href="/" className="text-gray-700 font-monserat-semibold hover:text-blue-500">
+          <Link href="/" className="text-black font-monserat-semibold hover:text-[#597C61]">
             About Us
           </Link>
-          <Link href="/" className="text-gray-700 font-monserat-semibold hover:text-blue-500">
+          <Link href="/" className="text-black font-monserat-semibold hover:text-[#597C61]">
             Our Work
           </Link>
-          <Link href="/" className="text-gray-700 font-monserat-semibold hover:text-blue-500">
+          <Link href="/" className="text-black font-monserat-semibold hover:text-[#597C61]">
             Impact
           </Link>
         </div>
