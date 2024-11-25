@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import ValuesPic from '../../public/img/core.png'
-import Link from 'next/link'
 
 const Values = () => {
   return (
